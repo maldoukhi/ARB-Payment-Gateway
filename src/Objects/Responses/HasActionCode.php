@@ -1,6 +1,6 @@
 <?php
 
-namespace Egyjs\Arb\Objects\Responses;
+namespace Tahdir\Arb\Objects\Responses;
 
 trait HasActionCode
 {

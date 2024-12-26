@@ -1,6 +1,6 @@
 <?php
 
-namespace Egyjs\Arb\Objects\Responses;
+namespace Tahdir\Arb\Objects\Responses;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;

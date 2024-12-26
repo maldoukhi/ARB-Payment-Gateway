@@ -1,6 +1,6 @@
 <?php
 
-namespace Egyjs\Arb\Events;
+namespace Tahdir\Arb\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 

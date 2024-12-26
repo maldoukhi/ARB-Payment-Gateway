@@ -7,9 +7,9 @@
  * It also handles the encryption and decryption of data for secure transactions.
  */
 
-namespace Egyjs\Arb;
+namespace Tahdir\Arb;
 
-use Egyjs\Arb\Objects\Card;
+use Tahdir\Arb\Objects\Card;
 use Illuminate\Support\Facades\Http;
 
 class Arb

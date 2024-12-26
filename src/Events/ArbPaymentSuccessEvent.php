@@ -1,8 +1,8 @@
 <?php
 
-namespace Egyjs\Arb\Events;
+namespace Tahdir\Arb\Events;
 
-use Egyjs\Arb\Objects\Responses\SuccessPaymentResponse;
+use Tahdir\Arb\Objects\Responses\SuccessPaymentResponse;
 use Illuminate\Foundation\Events\Dispatchable;
 
 class ArbPaymentSuccessEvent

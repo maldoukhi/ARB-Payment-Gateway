@@ -77,7 +77,7 @@ ARB_CURRENCY_CODE="682" # "682" = SAR
 ### Bank hosted payment
 to initiate a payment request hosted on the Bank website
 ```php
-use Egyjs\Arb\Facades\Arb;
+use Tahdir\Arb\Facades\Arb;
     
     
 $responce = Arb::initiatePayment(100); // 100 to be paid
@@ -94,8 +94,8 @@ dd($responce);
 to initiate a payment request hosted on the merchant website, you need to create a form for the card details, and pass 
 the card details to the `Arb::card()` method, then call the `Arb::initiatePayment()` method as shown below
 ```php
-use Egyjs\Arb\Facades\Arb;
-use Egyjs\Arb\Objects\Card;
+use Tahdir\Arb\Facades\Arb;
+use Tahdir\Arb\Objects\Card;
     
 
 Arb::card([
@@ -122,7 +122,7 @@ to refund a payment you need to call the `Arb::refund()` method as shown below
 
 [//]: # (todo: add the payment id to the refund method)
 ```php
-use Egyjs\Arb\Facades\Arb;
+use Tahdir\Arb\Facades\Arb;
 
 $responce = Arb::refund('000000000000000000', 100); // 100 to be refunded
 
@@ -138,7 +138,7 @@ dd($responce);
 ### manage data sent & received from the bank
 to send custom data to the bank, you can use the `Arb::data()` method before any transaction as shown below
 ```php
-use Egyjs\Arb\Facades\Arb;
+use Tahdir\Arb\Facades\Arb;
 Arb::data([
     'request_id' => 23,
     'user_id' => 43,
@@ -148,7 +148,7 @@ Arb::data([
 this data will be sent to the bank and will be returned in the response from the bank,
 `ArbPaymentSuccessEvent` will be fired with the received data from the bank as shown below
 ```php
-use Egyjs\Arb\Events\ArbPaymentSuccessEvent;
+use Tahdir\Arb\Events\ArbPaymentSuccessEvent;
 
 Event::listen(ArbPaymentSuccessEvent::class, function (ArbPaymentSuccessEvent $event) {
     $response = $event->response;
@@ -169,8 +169,8 @@ the processing logic doesn't need to know about or be tightly coupled to the act
 you can listen to the events in 2 ways:
 1. using the `EventServiceProvider` class
 ```php
-use Egyjs\Arb\Events\ArbPaymentFailedEvent;
-use Egyjs\Arb\Events\ArbPaymentSuccessEvent;
+use Tahdir\Arb\Events\ArbPaymentFailedEvent;
+use Tahdir\Arb\Events\ArbPaymentSuccessEvent;
 
 protected $listen = [
     // ...
@@ -184,8 +184,8 @@ protected $listen = [
 ```
 2. using the `Event::listen()` method
 ```php
-use Egyjs\Arb\Events\ArbPaymentFailedEvent;
-use Egyjs\Arb\Events\ArbPaymentSuccessEvent;
+use Tahdir\Arb\Events\ArbPaymentFailedEvent;
+use Tahdir\Arb\Events\ArbPaymentSuccessEvent;
 
 Event::listen(ArbPaymentSuccessEvent::class, function (ArbPaymentSuccessEvent $event) {
     // handle the success payment
@@ -200,7 +200,7 @@ Event::listen(ArbPaymentFailedEvent::class, function (ArbPaymentFailedEvent $eve
 if you want to handle the using a custom route instead of the events,
 you can pass the success and fail urls to the `Arb::successUrl()` and `Arb::failUrl()` methods as shown below
 ```php
-use Egyjs\Arb\Facades\Arb;
+use Tahdir\Arb\Facades\Arb;
 
 Arb::successUrl('http://localhost:8000/arb/response')
     ->failUrl('http://localhost:8000/arb/response');

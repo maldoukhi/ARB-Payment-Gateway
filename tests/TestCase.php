@@ -1,8 +1,8 @@
 <?php
 
-namespace Egyjs\Arb\Tests;
+namespace Tahdir\Arb\Tests;
 
-use Egyjs\Arb\ArbServiceProvider;
+use Tahdir\Arb\ArbServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Egyjs\\Arb\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Tahdir\\Arb\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

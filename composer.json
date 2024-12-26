@@ -1,17 +1,17 @@
 {
-    "name": "egyjs/arb",
+    "name": "tahdir/arb",
     "description": "Laravel API for Al Rajhi Bank's payment gateway (ARB)",
     "keywords": [
-        "egyjs",
+        "tahdir",
         "laravel",
         "arb"
     ],
-    "homepage": "https://github.com/egyjs/arb",
+    "homepage": "https://github.com/tahdir/arb",
     "license": "MIT",
     "authors": [
         {
-            "name": "egyjs",
-            "email": "el3zahaby@gmail.com",
+            "name": "tahdir",
+            "email": "info@tahdir.sa",
             "role": "Developer"
         }
     ],
@@ -31,13 +31,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Egyjs\\Arb\\": "src/",
-            "Egyjs\\Arb\\Database\\Factories\\": "database/factories/"
+            "Tahdir\\Arb\\": "src/",
+            "Tahdir\\Arb\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Egyjs\\Arb\\Tests\\": "tests/",
+            "Tahdir\\Arb\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -69,10 +69,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Egyjs\\Arb\\ArbServiceProvider"
+                "Tahdir\\Arb\\ArbServiceProvider"
             ],
             "aliases": {
-                "Arb": "Egyjs\\Arb\\Facades\\Arb"
+                "Arb": "Tahdir\\Arb\\Facades\\Arb"
             }
         }
     },

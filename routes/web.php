@@ -1,9 +1,9 @@
 <?php
 
-use Egyjs\Arb\Events\ArbPaymentFailedEvent;
-use Egyjs\Arb\Events\ArbPaymentSuccessEvent;
-use Egyjs\Arb\Facades\Arb;
-use Egyjs\Arb\Objects\Responses\SuccessPaymentResponse;
+use Tahdir\Arb\Events\ArbPaymentFailedEvent;
+use Tahdir\Arb\Events\ArbPaymentSuccessEvent;
+use Tahdir\Arb\Facades\Arb;
+use Tahdir\Arb\Objects\Responses\SuccessPaymentResponse;
 
 Route::post('/arb/response', function () {
     if (request()->has('trandata')) {
