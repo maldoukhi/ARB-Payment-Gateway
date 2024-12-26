@@ -1,6 +1,6 @@
 <?php
 
-// config for Egyjs/Arb
+// config for tahdir/arb
 return [
     'mode' => env('ARB_MODE', 'test'), // test or live
     'test_merchant_endpoint' => 'https://securepayments.alrajhibank.com.sa/pg/payment/tranportal.htm',

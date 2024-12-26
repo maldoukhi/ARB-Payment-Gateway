@@ -1,8 +1,8 @@
 #  Al Rajhi Bank payment gateway API wrapper (ARB)
 
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/egyjs/ARB-Payment-Gateway/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/egyjs/ARB-Payment-Gateway/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/egyjs/ARB-Payment-Gateway/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/egyjs/ARB-Payment-Gateway/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/egyjs/arb.svg?style=flat-square)](https://packagist.org/packages/egyjs/arb)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/tahdir/arb-Payment-Gateway/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/tahdir/arb-Payment-Gateway/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/tahdir/arb-Payment-Gateway/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/tahdir/arb-Payment-Gateway/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/tahdir/arb.svg?style=flat-square)](https://packagist.org/packages/tahdir/arb)
 
 
 This package is a wrapper around the Al Rajhi Bank payment gateway API,
@@ -21,7 +21,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require egyjs/arb
+composer require tahdir/arb
 ```
 
 [//]: # (You can publish and run the migrations with:)
@@ -159,7 +159,7 @@ Event::listen(ArbPaymentSuccessEvent::class, function (ArbPaymentSuccessEvent $e
 > Note: you can listen to the `ArbPaymentSuccessEvent` in both ways: `EventServiceProvider::$listen` or `Event::listen()` method
 
 ### Handle the response
-egyjs/arb has a built-in [event driven architecture (EDA)](https://en.wikipedia.org/wiki/Event-driven_architecture) system to handle the response from the bank;
+tahdir/arb has a built-in [event driven architecture (EDA)](https://en.wikipedia.org/wiki/Event-driven_architecture) system to handle the response from the bank;
 you can listen to the `ArbPaymentSuccessEvent` event to handle the success response,
 and the `ArbPaymentFailedEvent` event to handle the fail response, 
 
